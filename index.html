@@ -20,7 +20,7 @@
     <!-- Smooth Scrolling -->
     <script>
       $(function() {
-        $('ul.nav a').bind('click', function(event) {
+        $('a').bind('click', function(event) {
           var $anchor = $(this);
           $('html, body').stop().animate({
             scrollLeft: $($anchor.attr('href')).offset().left
@@ -33,50 +33,34 @@
   </head>
 
   <body>
+    <div id="container">
+      <div class="section black" id="section1">
+        <h2>Section 1</h2>
+        <p>Wahoo</p>
+        <img class="arrow left" src="button left.png">
+        <a href="#section2"><img class="arrow right" src="button right.png"></a>
+      </div>
 
-    <div class="section black" id="section1">
-      <h2>Section 1</h2>
-      <p>Wahoo</p>
-      <ul class="nav">
-        <li>1</li>
-        <li><a href="#section2">2</a></li>
-        <li><a href="#section3">3</a></li>
-        <li><a href="#section4">4</a></li>
-      </ul>
+      <div class="section white" id="section2">
+        <h2>Section 2</h2>
+        <p>Wahoo</p>
+        <a href="#section1"><img class="arrow left" src="button left.png"></a>
+        <a href="#section3"><img class="arrow right" src="button right.png"></a>
+      </div>
+
+      <div class="section black" id="section3">
+        <h2>Section 3</h2>
+        <p>Wahoo</p>
+        <a href="#section2"><img class="arrow left" src="button left.png"></a>
+        <a href="#section4"><img class="arrow right" src="button right.png"></a>
+      </div>
+
+      <div class="section white" id="section4">
+        <h2>Section 4</h2>
+        <p>Wahoo</p>
+        <a href="#section3"><img class="arrow left" src="button left.png"></a>
+        <img class="arrow right" src="button right.png">
+      </div>
     </div>
-
-    <div class="section white" id="section2">
-      <h2>Section 2</h2>
-      <p>Wahoo</p>
-      <ul class="nav">
-        <li><a href="#section1">1</a></li>
-        <li>2</li>
-        <li><a href="#section3">3</a></li>
-        <li><a href="#section4">4</a></li>
-      </ul>
-    </div>
-
-    <div class="section black" id="section3">
-      <h2>Section 3</h2>
-      <p>Wahoo</p>
-      <ul class="nav">
-        <li><a href="#section1">1</a></li>
-        <li><a href="#section2">2</a></li>
-        <li>3</li>
-        <li><a href="#section4">4</a></li>
-      </ul>
-    </div>
-
-    <div class="section white" id="section4">
-      <h2>Section 4</h2>
-      <p>Wahoo</p>
-      <ul class="nav">
-        <li><a href="#section1">1</a></li>
-        <li><a href="#section2">2</a></li>
-        <li><a href="#section3">3</a></li>
-        <li>4</li>
-      </ul>
-    </div>
-
   </body>
 </html>
