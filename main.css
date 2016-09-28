@@ -1,15 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 html {
   height: 100%;
 }
 body {
-  background-image: url('background.jpg');
-  background-size: 400% 100%;
-  background-repeat: no-repeat;
   width: 400%;
   height: 100%;
 }
 #container {
   height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 4s;
+  background-image: url('background.jpg');
+  background-size: 400% 100%;
+  background-repeat: no-repeat;
 }
 .section {
   margin: 0px;
@@ -26,7 +32,7 @@ body {
   display: block;
   position: absolute;
   padding: 0px;
-  margin: 15% 0px 0px 0px;
+  margin: 15% 0 0 0;
 }
 a .arrow:hover {
   opacity: 0.5;
@@ -37,3 +43,66 @@ a .arrow:hover {
 .right {
   margin-left: 95%;
 }
+.quote {
+  font-size: 2rem;
+  margin: 30px;
+  font-style: italic;
+}
+.free {
+  font-family: "Raleway", sans-serif;
+}
+.caged {
+  font-family: 'Droid Serif', serif;
+}
+#loader {
+  font-size: 4rem;
+  display: inline;
+  position: absolute;
+  background-color: #fff;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 70%;
+  margin: auto;
+  font-style: italic;
+  opacity: 0;
+  -webkit-transition: opacity 4s;
+  z-index: 1;
+}
+#p1 {
+  margin-top: 20%;
+}
+#p2 {
+  margin-left: 20%;
+  margin-top: 2%;
+}
+#p3 {
+  margin-left: 40%;
+  font-size: 3rem;
+  margin-top: 2%;
+}
+#button {
+  height: 12%;
+  width: 18%;
+  font-size: 2rem;
+  font-style: normal;
+  font-family: 'Droid Serif';
+  margin: auto;
+  margin-top: 10%;
+  background-color: black;
+  color: white;
+  opacity: 0.7;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  -webkit-transition: opacity 4s;
+}
+
+
+
+

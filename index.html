@@ -12,7 +12,7 @@
     <link href="main.css" rel="stylesheet">
 
     <!-- Google Fonts -->
-
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400|Raleway:400" rel="stylesheet">
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -28,36 +28,61 @@
           event.preventDefault();
         });
       });
+
+      function loader() {
+        setTimeout(function () {
+          $('#loader').css("opacity", "1");
+          setTimeout(function () {
+            $('#button').css("opacity", "0.7");
+          }, 1000);
+        }, 700);
+
+        $("#button").click(function(){
+          $('#loader').css("display","none");
+          $('#container').css("opacity","1");
+        });
+      }
+      $(document).ready(loader);
     </script>
 
   </head>
 
   <body>
+    <div id="loader" class="free">
+      <p id="p1">"The caged bird ...</p>
+      <p id="p2">sings of freedom."</p>
+      <p id="p3">(Angelou, l. 15-22)</p>
+      <div id="button">Enter</div>
+    </div>
     <div id="container">
       <div class="section black" id="section1">
-        <h2>Section 1</h2>
-        <p>Wahoo</p>
+        <div class="quote free">
+          <p>"The free bird ... dares to claim the sky." <br>(Angelou, l. 1-7)</p>
+        </div>
         <img class="arrow left" src="button left.png">
         <a href="#section2"><img class="arrow right" src="button right.png"></a>
       </div>
 
       <div class="section white" id="section2">
-        <h2>Section 2</h2>
-        <p>Wahoo</p>
+        <div class="quote free">
+          <p>"The free bird thinks of ... the fat worms waiting on a dawn-bright lawn." <br>(Angelou, l. 23-25)</p>
+        </div>
         <a href="#section1"><img class="arrow left" src="button left.png"></a>
         <a href="#section3"><img class="arrow right" src="button right.png"></a>
       </div>
 
       <div class="section black" id="section3">
-        <h2>Section 3</h2>
-        <p>Wahoo</p>
+        <div class="quote caged">
+          <p>"But a caged bird stands on the grave of dreams." <br>(Angelou, l. 27)</p>
+        </div>
         <a href="#section2"><img class="arrow left" src="button left.png"></a>
         <a href="#section4"><img class="arrow right" src="button right.png"></a>
       </div>
 
       <div class="section white" id="section4">
-        <h2>Section 4</h2>
-        <p>Wahoo</p>
+        <div class="quote caged">
+          <p>"The caged bird sings of things unknown ... and his tune is heard ... <br>on the distant hill." (Angelou, l. 15-20)</p>
+        </div>
         <a href="#section3"><img class="arrow left" src="button left.png"></a>
         <img class="arrow right" src="button right.png">
       </div>
