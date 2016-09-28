@@ -38,10 +38,10 @@ a .arrow:hover {
   opacity: 0.5;
 }
 .left {
-  margin-right: 90%;
+  margin-left: 1%;
 }
 .right {
-  margin-left: 90%;
+  margin-left: 94.5%;
 }
 .quote {
   font-size: 2rem;
