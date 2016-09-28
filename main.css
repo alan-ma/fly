@@ -72,18 +72,6 @@ a .arrow:hover {
   -webkit-transition: opacity 4s;
   z-index: 1;
 }
-#p1 {
-  margin-top: 20%;
-}
-#p2 {
-  margin-left: 20%;
-  margin-top: 2%;
-}
-#p3 {
-  margin-left: 40%;
-  font-size: 3rem;
-  margin-top: 2%;
-}
 #button {
   height: 12%;
   width: 18%;
@@ -102,7 +90,15 @@ a .arrow:hover {
   opacity: 0;
   -webkit-transition: opacity 4s;
 }
-
-
-
-
+#p1 {
+  margin-top: 20%;
+}
+#p2 {
+  margin-left: 20%;
+  margin-top: 2%;
+}
+#p3 {
+  margin-left: 40%;
+  font-size: 3rem;
+  margin-top: 2%;
+}
