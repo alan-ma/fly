@@ -14,8 +14,8 @@ body {
   opacity: 0;
   -webkit-transition: opacity 4s;
   background-image: url('background.jpg');
-  background-size: 400% 100%;
   background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .section {
   margin: 0px;
