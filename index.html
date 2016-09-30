@@ -24,7 +24,7 @@
           var $anchor = $(this);
           $('html, body').stop().animate({
             scrollLeft: $($anchor.attr('href')).offset().left
-          }, 2000);
+          }, 1500);
           event.preventDefault();
         });
       });
@@ -33,13 +33,34 @@
         setTimeout(function () {
           $('#loader').css("opacity", "1");
           setTimeout(function () {
-            $('#button').css("opacity", "0.7");
+            $('#button').css("opacity", "1");
           }, 1000);
         }, 700);
 
         $("#button").click(function(){
           $('#loader').css("display","none");
           $('#container').css("opacity","1");
+          setTimeout(function () {
+            $('#button').css("opacity", "0.7");
+          }, 1000);
+          setTimeout(function () {
+            $('#q1').css("opacity", "0.8");
+          }, 1500);
+        });
+        $("#section1 .right").click(function(){
+          setTimeout(function () {
+            $('#q2').css("opacity", "0.8");
+          }, 1500);
+        });
+        $("#section2 .right").click(function(){
+          setTimeout(function () {
+            $('#q3').css("opacity", "0.8");
+          }, 1500);
+        });
+        $("#section3 .right").click(function(){
+          setTimeout(function () {
+            $('#q4').css("opacity", "0.8");
+          }, 1500);
         });
       }
       $(document).ready(loader);
@@ -59,15 +80,16 @@
     </div>
     <div id="container">
       <div class="section black" id="section1">
-        <div class="quote free">
+        <div id="q1" class="quote free">
           <p>"The free bird ... dares to claim the sky." <br>(Angelou, l. 1-7)</p>
         </div>
-        <img class="arrow left" src="button left.png">
         <a href="#section2"><img class="arrow right" src="button right.png"></a>
+        <div class="popup-button">Template</div>
+        <div class="popup">Lorem Ipsum</div>
       </div>
 
       <div class="section white" id="section2">
-        <div class="quote free">
+        <div id="q2" class="quote free">
           <p>"The free bird thinks of ... the fat worms waiting on a dawn-bright lawn." <br>(Angelou, l. 23-25)</p>
         </div>
         <a href="#section1"><img class="arrow left" src="button left.png"></a>
@@ -75,7 +97,7 @@
       </div>
 
       <div class="section black" id="section3">
-        <div class="quote caged">
+        <div id="q3" class="quote caged">
           <p>"But a caged bird stands on the grave of dreams." <br>(Angelou, l. 27)</p>
         </div>
         <a href="#section2"><img class="arrow left" src="button left.png"></a>
@@ -83,11 +105,10 @@
       </div>
 
       <div class="section white" id="section4">
-        <div class="quote caged">
+        <div id="q4" class="quote caged">
           <p>"The caged bird sings of things unknown ... and his tune is heard ... <br>on the distant hill." (Angelou, l. 15-20)</p>
         </div>
         <a href="#section3"><img class="arrow left" src="button left.png"></a>
-        <img class="arrow right" src="button right.png">
       </div>
     </div>
   </body>
